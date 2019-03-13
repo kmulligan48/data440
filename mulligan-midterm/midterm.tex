@@ -45,7 +45,7 @@ Python code:
 \lstinputlisting[language=Python,frame=single]{midterm.generate.py}
 Create another dataset using the same method as above but now you will classify between 4 and the 
 rest of the numbers.  To do this you should change lines 8 and 9 as follows:\\
-\verb|y[y<>4] = -1|\\
+\verb|y[y!=4] = -1|\\
 \verb|y[y==4] = +1|\\
 Try the following three approaches using the dataset with the new changes, plot the final (best) 
 hypothesis on each and then explain which works best in terms both $E_{\text{out}}$ and the 
@@ -84,6 +84,12 @@ that were made were to comment/uncomment specific lines of the code which I will
     \end{center}
 \end{itemize}
 
+Analyzing these results we can see that the Pocket algorithm, starting from \textbf{w}=0, has a 
+classification error of 1063.  Then we used linear regression and did not recieve great results.  
+Going back to the Pocket Algorithm starting from the solution given by linear regression, we 
+obtained a smaller classification error than in part a.  The classification error for part c 
+was 652.  For both part a and c, the Pocket algorithm was stopped after 10,000 iterations.
+
 % ----------------------------------------------------------------------------------------------
 
 \subsection{2} Write a Python program that solves \textbf{Problem 2.12} in an iterative manner.  
@@ -114,9 +120,11 @@ is below.
 are very smart and talented.  That is why you are in this class.  With that in mind... I recently 
 acquired the domain name  "\verb|marist.ai|" and I am looking to create site for students and 
 faculty to share their AI-related projects; so, for a chance to be displayed our future website, 
-draw some type of logo for the new site here:
+draw some type of logo for the new site here:\\
+
+Here is my proposed logo for the new \verb|marist.ai| domain name.
 \begin{center}
-    \fbox{\begin{minipage}{2.5in}\hfill\vspace{2.5in}\end{minipage}}
+    \includegraphics[width=0.6\textwidth]{logo.jpg}
 \end{center}
 
 \end{document}
