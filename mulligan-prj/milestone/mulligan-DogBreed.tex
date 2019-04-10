@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{authblk}
+\usepackage{todonotes}
+\usepackage{hyperref}
+\usepackage{listings}
+
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+ 
+\newenvironment{problem}[2][problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+ 
+\begin{document}
+\lstset{language=Python}
+ 
+\title{\textbf{Dog Breed Identification - Milestone}}
+\date{}
+
+\author{
+        Kaitlyn Mulligan\\
+        Marist College - DATA 440L \\
+        April 10, 2019
+ }
+
+\maketitle
+
+\begin{abstract}
+    
+\end{abstract} \hspace{10pt}
+\thispagestyle{empty}
+\clearpage
+\setcounter{page}{1}
+
+\section{Introduction}
+\textbf{(Describes the motivation of this work and outlines the rest of the paper.)}\\
+\indent In the field of Machine Learning, we have the ability to take data, learn the data through different methods, and then can predict on a test data set based on what was learned.  This process can be done on datasets of images such as dog breeds.  In regards to images of dogs, we can pass in a training dataset, learn them using different methods, and then we can test how well the program knows the images by passing in a testing dataset and see how accurately the program predicts the dog breed in the new image.  There are different methods that can be implemented to achieve this goal, but the focus of this paper will be implementing a Convolutional Neural Network.  As stated in \cite{Escontrela2018}, Convolutional Neural Networks are known ``for their ability to recognize patterns present in images."\\
+\indent While exploring Convolutional Neural Networks we will see how the method works, analyze other implementations of this method, and finally implement it as a classifier in order to indentify different dog breeds.  We will then analyze the results to see how well the program is classifying the dog breeds.
+
+\section{Background and/or Related Work}
+\textbf{(Describes what other researchers in the same area have done, and how they perhaps could be improved.)}
+
+\section{Methodology}
+\textbf{(Describes what is the approach taken in this paper.)}\\
+\indent The method used to attempt to predict the breed of dog in the images is a Convolutional Neural Network.  The program that was implemented was built off of a program learned in the class as well as some additions from outside research.\\
+\textbf{Notes on the program:}\\
+\indent The first step is to download all of the necessary packages.  Next I downloaded the file with the labels of the breeds dogs and changed the strings to integers as well as identifying how many unique breeds of dogs there are in this dataset.  With this, we can now begin part one which is downloading the dataset.  The code for part one is as follows.
+\lstinputlisting[language=Python,frame=single]{partOne.py}
+Next we need to verify the dataset is ok and prepare the data for the Convolutional Neural Network which we can do with the following two pieces of code.  First this is how we can verify the data is ok.
+\lstinputlisting[language=Python,frame=single]{verify.py}
+Next is how we can prepare the data for the Convolutional Neural Network.
+\lstinputlisting[language=Python,frame=single]{prepare.py}
+Once all of this is complete, we can move on to the Convolutional Neural Network.  Part two is to build the Convolutional Neural Network and Part three is to fit the CNN to the images.  Both of these parts will be included in the chunk of code as follows.
+\lstinputlisting[language=Python,frame=single]{partTwoThree.py}
+Now that we have downloaded the data, built the Convolutional Neural Network, and fit the CNN to the the images, we can begin predicting the breeds of the dogs in the testing dataset.  To predict the breeds, we can implement the following code.
+\lstinputlisting[language=Python,frame=single]{predict.py}
+\textbf{(This code is still a rough version and needs some editing)}
+
+\section{Experiments}
+\textbf{(Describes the experiments performed, including details on the data used.)}\\
+\indent The data for this experiment comes from a Kaggle competition in which the task was to determine the breed of a dog based on an image.  The data can be accessed here: \href{https://www.kaggle.com/c/dog-breed-identification}
+{Dog Breed Identification}.  The data set has both a training and a testing set of images of different dogs.  All of the images have a filename that corresponds to a unique id.  A file is included which contains the unique id of the image along with the breed of the dog.  The dataset is comprised of 120 different breeds of dogs.\\
+\indent While implementing the program I have written, it took a lot of work to figure out how many samples I could use, and what size I needed to resize the images to in order to not crash the program.  I initially resized the images to 256 by 256 and used the entire dataset, but this quickly crashed the program.  After a lot of fiddling with the numbers, I was able to use the entire dataset with resizing the images to 64 by 64.  This all occurred before getting to the Convolutional Neural Network.  The program was crashing while just in the downloading and resizing phase of the images.  Once this worked I was able to start preparing the data for the Convolutional Neural Network.  This included normalizing it to [0, 1] and converting the labels to one hot encoding as well as splitting the data into training and validation sets.  Once this is done, I was able to build the Convolutional Neural Network and fit the CNN to the images.  In order to avoid crashing the program again I used a batch size of 128.  When attempting to predict the breeds of dogs, I found the the CNN was overfitting the data.  Therefore, I increased the number of epochs.  I started at 25 epochs, increased to 50, and further increased to 500 epochs.  I found that with 50 epochs the program was still overfitting the data.  When using 500 epochs, I did not see a problem of overfitting.  While the program was predicting different breeds of dogs, it still does not seem to be predicting very well.  \textbf{(Need to edit this paragraph and split up)}\\
+
+\section{Discussion and/or Analysis}
+\textbf{(Examines the results of the experiments and draws some conclusions about their significance.)}\\
+\textbf{(Discuss problems ran into and analyze accuracy of predictions)}
+
+\section{Conclusion}
+\textbf{(Summarizes the paper and its findings.)}
+
+
+\begin{thebibliography}{9} 
+
+\bibitem{Escontrela2018}
+A. Escontrela, ``Convolutional Neural Networks from the ground up," \textit{Towards Data Science}, 16-Jun-2018. [Online]. Available: https://towardsdatascience.com/convolutional-neural-networks-from-the-ground-up-c67bb41454e1. [Accessed: 24-Mar-2019].
+
+\bibitem{Kaggle}
+``Dog Breed Identification," \textit{Kaggle}. [Online]. Available: https://www.kaggle.com/c/dog-breed-identification. [Accessed: 13-Feb-2019].
+
+\bibitem{Bendemra2018}
+H. Bendemra, ``Build Your First Deep Learning Classifier using TensorFlow: Dog Breed Example," \textit{Towards Data Science}, 26-Apr-2018. [Online]. Available: https://towardsdatascience.com/build-your-first-deep-learning-classifier-using-tensorflow-dog-breed-example-964ed0689430. [Accessed: 24-Mar-2019].
+
+\end{thebibliography}
+
+
+
+
+\end{document}
