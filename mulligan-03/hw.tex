@@ -216,11 +216,10 @@ than the original. The experiment consists of the following steps:
     fairly well until the end when it kind of diverged from the rest slightly.  When looking at the 
     output of the program, we want the value of the CV score to be larger.  As we can see in the output, 
     every time the program output a new value for neurons and $\eta$, it had the value of the CV score 
-
     increase.  Therefore, as stated in part (c) we have that having 36 neurons and $\eta = 0.1$ produced 
-    the largest CV score with 1,000 samples.  We can see here that the CV score increased with the increase 
-    in the number of neurons.  The value of $\eta$ was fairly consistent at $\eta = 0.1$.  Therefore, I 
-    believe that the performance of the network increased with an increase in the number of neurons.
+    the largest CV score with 1,000 samples.  As we can see, we need not too few neurons, but also not 
+    too many.  If we have too many neurons the program will overfit, but the cross validation in this 
+    program will catch that for us.  The value of $\eta$ was fairly consistent at $\eta = 0.1$.
 
     \item[(e)] (\textbf{extra credit}) Repeat 4.(c)-(d) but for 10,000 samples.
     
@@ -244,11 +243,10 @@ than the original. The experiment consists of the following steps:
     we want the value of the CV score to be larger.  As we can see as before, every time the program 
     output a new value for neurons and $\eta$, the value of the CV score increased.  Therefore, 
     as stated earlier, we have that for this program, with 10,000 samples, having 50 neurons and 
-    $\eta = 0.1$ produced the largest CV score.  Again we can see that the CV score increased with 
-    the increase in the number of neurons.  Here again, the value of $\eta$ was fairly consistent at 
-    $\eta = 0.1$.  As I concluded above, after analyzing this output with 10,000 samples in comparison 
-    to the output with 1,000 samples, I believe that the performance of the network increased with an 
-    increase in the number of neurons.  Also, with larger sample sizes, the program may seem to use more 
+    $\eta = 0.1$ produced the largest CV score.  Here again, the value of $\eta$ was fairly consistent 
+    at $\eta = 0.1$.  As stated above, we can see that we need not too few neurons, but also not 
+    too many.  If we have too many neurons the program will overfit, but the cross validation in this 
+    program will catch that for us.  Also, with larger sample sizes, the program may seem to use more 
     neurons.
 \end{itemize}
 

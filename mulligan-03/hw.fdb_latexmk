@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1556679597 "/Users/kaitlynmulligan/Desktop/Junior/DATA440/data440/mulligan-03/hw.tex" "/Users/kaitlynmulligan/Desktop/Junior/DATA440/data440/mulligan-03/hw.pdf" "hw" 1556679603
-  "/Users/kaitlynmulligan/Desktop/Junior/DATA440/data440/mulligan-03/hw.aux" 1556679600 1295 a44e2181a262f6aa5d7fb32b07405e8f ""
-  "/Users/kaitlynmulligan/Desktop/Junior/DATA440/data440/mulligan-03/hw.tex" 1556679603 15716 d6761784e047a3ead36d38d10f6eb696 ""
+["pdflatex"] 1556741943 "/Users/kaitlynmulligan/Desktop/Junior/DATA440/data440/mulligan-03/hw.tex" "/Users/kaitlynmulligan/Desktop/Junior/DATA440/data440/mulligan-03/hw.pdf" "hw" 1556741945
+  "/Users/kaitlynmulligan/Desktop/Junior/DATA440/data440/mulligan-03/hw.aux" 1556741945 1295 a44e2181a262f6aa5d7fb32b07405e8f ""
+  "/Users/kaitlynmulligan/Desktop/Junior/DATA440/data440/mulligan-03/hw.tex" 1556741943 15596 c2192a68625303e913c6668f9c127b03 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1480098698 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1480098698 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -162,15 +162,15 @@
   "4e-c.jpg" 1556598458 157820 5ad8df5880a74d566a27fcf54365283b ""
   "64colors.jpg" 1556580364 470087 02411a4f6941ce932baf0f0ac2e1074f ""
   "8colors.jpg" 1556580499 193381 f25d39e502d900de44a34dd436718278 ""
-  "hw.aux" 1556679600 1295 a44e2181a262f6aa5d7fb32b07405e8f ""
-  "hw.out" 1556679600 293 c546e22854dabca22a4a8bd8626b7304 ""
-  "hw.tex" 1556679603 15716 d6761784e047a3ead36d38d10f6eb696 ""
+  "hw.aux" 1556741945 1295 a44e2181a262f6aa5d7fb32b07405e8f ""
+  "hw.out" 1556741945 293 c546e22854dabca22a4a8bd8626b7304 ""
+  "hw.tex" 1556741943 15596 c2192a68625303e913c6668f9c127b03 ""
   "hw3_1_a_gendata.py" 1556418188 330 15cde0d177e33d8e3e65e65853ee8771 ""
   "original.jpg" 1556580333 623220 1ff8671bd4bb92f02bf8ba7be4665471 ""
   (generated)
+  "hw.aux"
+  "hw.pdf"
+  "hw.out"
   "hw.log"
   "/Users/kaitlynmulligan/Desktop/Junior/DATA440/data440/mulligan-03/hw.log"
-  "hw.aux"
   "/Users/kaitlynmulligan/Desktop/Junior/DATA440/data440/mulligan-03/hw.pdf"
-  "hw.out"
-  "hw.pdf"
